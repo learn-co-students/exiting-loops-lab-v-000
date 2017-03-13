@@ -2,9 +2,9 @@ function breakOut(array, changeValue, stopValue) {
   for(let i = 0, l = array.length; i < l; i++) {
     if(array[i] === stopValue) {
       break
-    } else {
-      array[i] = changeValue
     }
+
+    array[i] = changeValue
   }
 
   return array
@@ -28,4 +28,6 @@ function findBy(array, findFn) {
       return array[i]
     }
   }
+
+  return null
 }
