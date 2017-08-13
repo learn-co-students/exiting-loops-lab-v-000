@@ -1,30 +1,33 @@
 function breakOut(array, changeValue, stopValue){
-  for (let i = 0, l = array.length; i < l; i++){
+  for (let i = 0 ; i < array.length ; i ++){
     if (array[i] !== stopValue){
       array[i] = changeValue
-    } else if (array[i] === stopValue){
-      return array
+    } else {
       break
-    }
-  }
-}
-
-function keepGoing(array, changeValue, skipValue){
-  for (let i = 0, l = array.length; i < l; i++){
-    if (array[i] !== skipValue){
-      array[i] = changeValue
-    } else if (array[i] === skipValue){
-      continue
     }
   }
   return array
 }
 
+function keepGoing(array, changeValue, skipValue){
+  for (let i = 0 ; i < array.length ; i++){
+    if (array[i] === skipValue){
+      continue
+    } else {
+      array[i] = changeValue
+    }
+  }
+  return array
+}
 
-function findBy(array, findFn) {
-  for (let i = 0, l = array.length; i < l; i++) {
-    if (findFn(array[i])) {
+// expect(findBy([1, 1, 1, 1, c, 1, 2], n => n === c)).toEqual(c)
+// })
+
+function findBy(array, findFn){
+  for (let i = 0 ; i < array.length ; i ++){
+    if (findFn(array[i])){
       return array[i]
     }
   }
+  return null
 }
