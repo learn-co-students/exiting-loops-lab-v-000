@@ -1,7 +1,7 @@
 function breakOut(array, changeValue, stopValue){
-   return array.map(val=> {
+   return array.forEach(val=> {
       if (val === stopValue) {
-        break
+        break;
       }
       val = changeValue;
      }
